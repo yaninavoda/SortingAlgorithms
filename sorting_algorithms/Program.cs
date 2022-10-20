@@ -42,7 +42,7 @@
         }
         static void Main(string[] args)
         {
-            int[] array = new int[] { 3, 5, 1, 4, 0};
+            int[] array = new int[] { 6,8,1,5,3,9,2,0,5};
             
             SelectionSort(ref array);
             //InsertionSort(ref array);
