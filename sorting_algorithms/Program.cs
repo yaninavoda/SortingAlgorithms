@@ -1,4 +1,6 @@
-﻿namespace sorting_algorithms
+﻿using System.Diagnostics.Metrics;
+
+namespace sorting_algorithms
 {
     internal class Program
     {
@@ -40,15 +42,32 @@
                 i++;
             }
         }
+
+        public class Car
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public static int Counter { get; set; } = 0;
+            public Car()
+            {
+                Counter++;
+                this.Id = Counter;
+            }
+        }
         static void Main(string[] args)
         {
-            int[] array = new int[] { 6,8,1,5,3,9,2,0,5};
+            //int[] array = new int[] { 6,8,1,5,3,9,2,0,5};
             
-            SelectionSort(ref array);
+            //SelectionSort(ref array);
             //InsertionSort(ref array);
 
-            foreach (int i in array) Console.WriteLine(i);
-            
+            //foreach (int i in array) Console.WriteLine(i);  
+
+            Car car = new Car();
+            Console.WriteLine(car.Id);
+            Car car2 = new Car();
+            Console.WriteLine(car2.Id);
         }
+
     }
 }
